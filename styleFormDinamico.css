@@ -1,0 +1,79 @@
+body{
+   background:  #282a36;
+   align-items: center;
+}
+.FocusBoard{
+   
+   display: flex;
+   flex-direction: column; 
+   height: fit-content;
+   width:100%;
+   margin-top: 25%;
+   
+
+}
+.FocusBoard #Legenda{
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   color:#f0d957;
+   font-size: 1.5rem;
+   border-right: 2.5px solid #cb78a3 ;
+   width: 45ch;
+   overflow: hidden;
+   white-space: nowrap;
+   animation: piscarCursor 0.5s infinite,digitarAnimacao 14s infinite steps(45);
+   align-self: center;
+   margin-bottom: 2.5%;
+}
+
+#Form{
+   align-self:center;
+}
+#Form #BotaoAdicionar{
+   font-size: 20px;
+   font-weight: 400;
+   width: 36px;
+   height: 30px;
+   background-color: #f773ad;
+   border:#bd93f9 solid 0.5px;
+   border-radius: 25px;
+   color: white;
+}
+
+.FormGroups button{
+   background-color: #f773ad;
+   border:#bd93f9 solid 0.5px;
+   border-radius: 25px;
+   color: white;
+   width: 96px;
+   height: 24px;
+   font-weight: 750;
+   
+}
+#Form input{
+   width: 240px;
+   height: 24px;
+   border-radius: 25px;
+   margin-bottom: 15px;
+}
+
+
+@keyframes piscarCursor {
+   50%{
+       border-right-color: transparent;
+   }
+}
+
+@keyframes digitarAnimacao {
+   0%{
+      width: 0ch;
+   }
+   50%{
+      width: 45ch;
+   }
+   70%{
+      width: 45ch;
+   }
+   100%{
+      width: 0ch;
+   }
+}
