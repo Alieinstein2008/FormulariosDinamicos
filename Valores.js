@@ -11,11 +11,11 @@ function AdicionarValor(){
     }else{
         if(CampoValor == 1){
             document.getElementById('Formulario').insertAdjacentHTML('beforeend', `<div class="FormGroups"><label for="Inserir Valor${CampoValor}:"><button type="submit">Enviar</button></label></div>`)
-            document.getElementById("BotaoAdiciona").disabled = true;
+            document.getElementById("BotaoAdicionar").disabled = true;
         }else{
             document.getElementById(`${search}`).remove()
-            document.getElementById('Formulario').insertAdjacentHTML('beforeend', `<div class="FormGroups"><label for="Inserir Valor${CampoValor}:"><button type="submit">Enviar</button></label></div>`)
-            document.getElementById("BotaoAdiciona").disabled = true;
+            document.getElementById('Formulario').insertAdjacentHTML('beforeend', `<div class="FormGroups"><label for="Inserir Valor${CampoValor}:"><button type="submit" id="BotaoEnviar">Enviar</button></label></div>`)
+            document.getElementById("BotaoAdicionar").disabled = true;
         }
         
     
