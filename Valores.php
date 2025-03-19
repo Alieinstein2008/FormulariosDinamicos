@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valores</title>
     <script src="Valores.js"></script>
+    <link rel="stylesheet" href="styleFormDinamico.css">
 </head>
 <body>
-    <form action="Valores1.php" method="post">
-        <div id="Formulario">
-            <div class="FormGroups">
-                <label for="Inserir Valor:1">
-                    <input type="text" placeholder="Informe o valor1" name="Valor1" id="valor1" >
-                    <button type="button" onclick="AdicionarValor()" id="BotaoAdiciona">Adicionar outro valor</button>
-                </label>
-            </div>
-        </div>
-    </form>  
+    <div class="FocusBoard">
+        <div id="Legenda">Números menores ou iguais à zero dão fim ao preenchimento!</div>
+        <div id="Form">
+            <form action="Valores1.php" method="post">
+                <div id="Formulario">
+                    <div class="FormGroups">
+                        <label for="Inserir Valor:1">
+                            <input type="text" placeholder="Informe o valor1" name="Valor1" id="valor1" >
+                            <button id="BotaoAdicionar"type="button" onclick="AdicionarValor()" >+</button>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>  
+    </div>
+    
 </body>
 </html>
