@@ -1,5 +1,5 @@
 <?php
-        $Cabecalho = "<table class='Tabela'><tr><td>Valor lido<td/><td>Quadrado<td/><td>Cubo<td/></tr>";
+        $Cabecalho = "<table class='Tabela' border='1'><tr><td>Valor lido<td/><td>Quadrado<td/><td>Cubo<td/></tr>";
         $CampoValor = 1;
         $Valores = [];
         do{
