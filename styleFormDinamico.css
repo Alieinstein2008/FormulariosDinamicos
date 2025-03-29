@@ -1,35 +1,165 @@
-var CampoValor = 1;
-function AdicionarValor() {
-    var search = `valor${CampoValor}`;
-    var InputAtual = document.getElementById(search).value;
-    if (InputAtual > 0) {
-        CampoValor++;
-        document.getElementById('Formulario').insertAdjacentHTML('beforeend', `<div class="FormGroups">
-        <label for="Inserir Valor${CampoValor}:"><input type="number" autocomplete="off" placeholder="Informe o valor${CampoValor}" name="Valor${CampoValor}" id="valor${CampoValor}" step="0.01">
-        </div>`)
-    } else {
-        if (CampoValor == 1) {
-            document.getElementById('ButtonsBoard').insertAdjacentHTML('beforeend', `<input type="button" value="Enviar" id="BotaoEnviar"onclick="VerificarCampos()">`)
-            document.getElementById("BotaoAdicionar").disabled = true;
-        } else {
-            document.getElementById(`${search}`).remove()
-            document.getElementById('ButtonsBoard').insertAdjacentHTML('beforeend', `<input type="button" value="Enviar" id="BotaoEnviar" onclick="VerificarCampos()">`)
-            document.getElementById("BotaoAdicionar").disabled = true;
-        }
-
-
-
-
-    }
+::-webkit-input-placeholder {
+   color: #dbdcfd;
 }
-function VerificarCampos() {
-    const CampoPrimarioId = "valor1";
-    const IdFormulario = "IdForm"
-    if (document.getElementById(CampoPrimarioId).value == '') {
-        alert("É necessário informar o valor de pelo menos um único campo, por favor preencha-o")
-    } else {
-        document.getElementById(IdFormulario).submit();
-    }
+
+:-moz-placeholder {
+   /* Firefox 18- */
+   color: #dbdcfd;
+}
+
+::-moz-placeholder {
+   /* Firefox 19+ */
+   color: #dbdcfd;
+}
+
+:-ms-input-placeholder {
+   color: #dbdcfd;
+}
+
+html {
+   font-size: 18px;
+}
+
+body {
+   background: #020225;
+   overflow: hidden;
+
+}
+
+.FocusBoard {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 100vw;
+   height: 100vh;
+   align-items: center;
+   flex-wrap: wrap-reverse;
+}
+
+.FocusBoard #Legenda {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: #f4bb25;
+   font-size: 1.5rem;
+   border-right: 2.5px solid #dbdcfd;
+   width: 16ch;
+   overflow: hidden;
+   white-space: nowrap;
+   animation: piscarCursor 0.5s infinite, digitarAnimacao 10s infinite steps(19);
+   display: inline;
+}
+
+.FocusBoard #SubLegenda {
+   color: #dbdcfd;
+   font-size: 0.8rem;
+   padding: 1rem 0px 1rem 0px;
+}
+
+#Form {
+   align-self: center;
+
+}
+
+.FormGroups {
+   width: fit-content;
+
+}
+
+#ButtonsBoard {
+   width: fit-content;
+}
+
+.FormGroups #BotaoAdicionar {
+   width: 50px;
+   height: 30px;
+   font-size: 20px;
+   font-weight: 400;
+   background-color: #a31508;
+   color: #dbdcfd;
+   border: none;
+   border-color: #dbdcfd;
+   border-radius: 25px;
+   font-family: 'Roboto', sans-serif;
+   letter-spacing: 2.5px;
+   cursor: pointer;
+   outline: none;
+   transition: all 0.3s ease 0s;
+}
+
+#ButtonsBoard #BotaoEnviar {
+   text-transform: uppercase;
+   text-align: center;
+   width: 120px;
+   height: 30px;
+   font-size: 12px;
+   font-family: 'Roboto', sans-serif;
+   letter-spacing: 2.5px;
+   background-color: #a31508;
+   color: #dbdcfd;
+   border: none;
+   border-color: #dbdcfd;
+   border-radius: 25px;
+   cursor: pointer;
+   outline: none;
+   transition: all 0.3s ease 0s;
+}
+
+#ButtonsBoard #BotaoEnviar:hover {
+   box-shadow: 0px 15px 20px #7d74f854;
+   color: #dbdcfd;
+   transform: translateY(-7px);
+
+}
+
+#ButtonsBoard #BotaoAdicionar:disabled {
+   background-color: #46464b;
+   color: #dbdcfd;
+
+}
+
+#ButtonsBoard #BotaoAdicionar:hover {
+   box-shadow: 0px 15px 20px #7d74f854;
+   color: #dbdcfd;
+   transform: translateY(-7px);
+
+}
+
+#Form input {
+   font-family: 'Roboto', sans-serif;
+   letter-spacing: 2.5px;
+   width: 240px;
+   height: 24px;
+   border-radius: 25px;
+   margin-bottom: 15px;
+   background-color: #7d74f8;
+   color: #dbdcfd;
+   border: none;
+   cursor: pointer;
+   outline: none;
+   box-shadow: 0px 8px 15px #2c54f20e;
+
+}
 
 
+@keyframes piscarCursor {
+   50% {
+      border-right-color: transparent;
+   }
+}
+
+@keyframes digitarAnimacao {
+   0% {
+      width: 0ch;
+   }
+
+   50% {
+      width: 16ch;
+   }
+
+   70% {
+      width: 16ch;
+   }
+
+   100% {
+      width: 0ch;
+   }
 }
