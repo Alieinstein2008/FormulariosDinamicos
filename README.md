@@ -5,10 +5,15 @@ Esse projeto teve como objetivo demonstrar, utilizar e aprofundar conhecimentos 
 assim como de usurfruir de técnicas relacionadas a dinamização de um projeto, principalmente apartir do uso de JavaScript com a geração de campos e tags HTML. 
 Por fim, também foi possível o aprofundamento de conhecimentos relacionados à tratamento de dados do cliente pelo servidor, assim como conceitos e tratamento de matrizes(arrays) a partir do uso do PHP.
 
-### Screenshot da interface web do projeto(Client-Side):
+### Screenshot da interface web inicial do projeto(Client-Side):
+Assim que o usuário acessa a aplicação é essa a interface que se apresenta
+
+![Screenshot do Client-side da aplicação funcionando](FormDinamicoClientSide1Image.jpg)
+
+### Screenshot da interface web do projeto preenchida(Client-Side):
 Funcionalidades de tratamento de elementos html feito com JavaScript
 
-![Screenshot do Client-side da aplicação funcionando](FormDinamicoClientSideImage.jpg)
+![Screenshot do Client-side da aplicação funcionando](FormDinamicoClientSide2Image.jpg)
 
 ### Screenshot da tabela resultante do tratamento de dados feito pelo PHP(Server-Side):
 Resultado do tratamento de Dados obtidos a partir do client-side e retornado com PHP
