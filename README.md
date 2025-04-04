@@ -29,4 +29,4 @@ o usuário será redirecionado à uma tabela contendo: Os numeros inseridos, os 
 
 ## Observação:
 
-Infelizmente não é possivel deixar um link para que acessem essa aplicaçõ online, já que no momenento não possuo nenhum construtor de sites que suportam PHP.
+Infelizmente não é possivel deixar um link para que acessem essa aplicação online, já que no momento não encontrei nenhum construtor de sites que dê suporte a PHP.
